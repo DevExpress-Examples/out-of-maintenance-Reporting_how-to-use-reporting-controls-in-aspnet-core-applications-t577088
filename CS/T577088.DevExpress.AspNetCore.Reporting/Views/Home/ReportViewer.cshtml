@@ -1,0 +1,35 @@
+﻿@model WebDocumentViewerModel
+
+@{
+    ViewData["Title"] = "Report Viewer";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<link rel="stylesheet" type="text/css" href="~/lib/jquery-ui/themes/base/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="~/lib/jquery-ui/themes/base/resizable.css" />
+<link rel="stylesheet" type="text/css" href="~/lib/jquery-ui/themes/base/draggable.css" />
+
+<script src="~/lib/jquery-ui/jquery-ui.js"></script>
+<script src="~/lib/knockout/dist/knockout.js"></script>
+
+<script src="~/lib/cldrjs/dist/cldr.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/event.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/supplemental.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/unresolved.js"></script>
+<script src="~/lib/globalize/dist/globalize.js"></script>
+<script src="~/lib/globalize/dist/globalize/currency.js"></script>
+<script src="~/lib/globalize/dist/globalize/message.js"></script>
+<script src="~/lib/globalize/dist/globalize/number.js"></script>
+<script src="~/lib/globalize/dist/globalize/date.js"></script>
+
+<script src="~/lib/devextreme/js/dx.all.js"></script>
+<link href="~/lib/devextreme/css/dx.common.css" rel="stylesheet" />
+<link href="~/lib/devextreme/css/dx.light.css" rel="stylesheet" />
+
+<script src="~/lib/xtrareportsjs/js/dx-designer.js"></script>
+<script src="~/lib/xtrareportsjs/js/web-document-viewer.js"></script>
+<script type="text/html" src="~/lib/xtrareportsjs/html/web-document-viewer.html"></script>
+<link href="~/lib/xtrareportsjs/css/web-document-viewer-light.css" rel="stylesheet" />
+
+@Html.DevExpress().WebDocumentViewer("webDocumentViewer1").Height("1000px").Bind(Model.Report)

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" PageWidth="850" PageHeight="1100" Version="17.2" DataMember="Categories" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="TopMargin1" HeightF="100" />
+    <Item2 Ref="4" ControlType="DetailBand" Name="Detail1" HeightF="100">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRTable" Name="table1" SizeF="647.91,97.9" LocationFloat="0, 0">
+          <Rows>
+            <Item1 Ref="6" ControlType="XRTableRow" Name="tableRow1" Weight="0.99989786538657954">
+              <Cells>
+                <Item1 Ref="7" ControlType="XRTableCell" Name="tableCell1" Weight="0.44370360080875437" Text="tableCell1">
+                  <ExpressionBindings>
+                    <Item1 Ref="8" Expression="[CategoryID]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                </Item1>
+                <Item2 Ref="9" ControlType="XRTableCell" Name="tableCell2" Weight="0.89388958342979752" Text="tableCell2">
+                  <ExpressionBindings>
+                    <Item1 Ref="10" Expression="[CategoryName]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="11" ControlType="XRTableCell" Name="tableCell3" Weight="1.6589341112191507" Text="tableCell3">
+                  <ExpressionBindings>
+                    <Item1 Ref="12" Expression="[Description]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                </Item3>
+                <Item4 Ref="13" ControlType="XRTableCell" Name="tableCell4" Weight="1.0034727045422973" Text="tableCell4">
+                  <Controls>
+                    <Item1 Ref="14" ControlType="XRPictureBox" Name="pictureBox1" Sizing="StretchImage" SizeF="162.5,97.9" LocationFloat="0, 0">
+                      <ExpressionBindings>
+                        <Item1 Ref="15" Expression="[Picture]" PropertyName="Image" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Controls>
+                </Item4>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="16" ControlType="BottomMarginBand" Name="BottomMargin1" HeightF="100" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.EntityFramework.EFDataSource,DevExpress.DataAccess.v17.2" Name="NorthwindEFDataSource" Source="T577088.DevExpress.AspNetCore.Reporting.Models.Northwind.NorthwindContext, T577088.DevExpress.AspNetCore.Reporting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

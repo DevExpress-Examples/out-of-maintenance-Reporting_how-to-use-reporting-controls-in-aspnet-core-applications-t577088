@@ -1,0 +1,7 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "xtrareportsjs": "~17.2"
+  }
+}

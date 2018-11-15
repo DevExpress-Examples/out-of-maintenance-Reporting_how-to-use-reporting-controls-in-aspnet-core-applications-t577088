@@ -1,3 +1,18 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Controllers/HomeController.cs)
+* [ReportDesignerModel.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Models/ReportDesignerModel.cs)
+* [WebDocumentViewerModel.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Models/WebDocumentViewerModel.cs)
+* [Program.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Program.cs)
+* [CustomReportResolver.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Services/CustomReportResolver.cs)
+* [CustomReportStorageWebExtension.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Services/CustomReportStorageWebExtension.cs)
+* [CustomWebDocumentViewerOperationLogger.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Services/CustomWebDocumentViewerOperationLogger.cs)
+* **[Startup.cs](./CS/T577088.DevExpress.AspNetCore.Reporting/Startup.cs)**
+* [_ViewImports.cshtml](./CS/T577088.DevExpress.AspNetCore.Reporting/Views/_ViewImports.cshtml)
+* [ReportDesigner.cshtml](./CS/T577088.DevExpress.AspNetCore.Reporting/Views/Home/ReportDesigner.cshtml)
+* [ReportViewer.cshtml](./CS/T577088.DevExpress.AspNetCore.Reporting/Views/Home/ReportViewer.cshtml)
+<!-- default file list end -->
 # How to use reporting controls in ASP.NET Core applications
 
 

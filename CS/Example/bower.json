@@ -1,5 +1,5 @@
 {
-  "name": "Example",
+  "name": "example",
   "dependencies": {
     "xtrareportsjs": "~18.2.3",
     "ace-builds": "latest",

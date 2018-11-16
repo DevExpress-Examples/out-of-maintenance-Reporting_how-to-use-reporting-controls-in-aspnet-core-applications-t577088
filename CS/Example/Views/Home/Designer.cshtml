@@ -1,0 +1,56 @@
+@using DevExpress.DataAccess.Sql;
+@using SqlDataSource = DevExpress.DataAccess.Sql.SqlDataSource;
+
+<link href="~/lib/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/lib/jquery-ui/themes/base/resizable.css" rel="stylesheet" />
+<link href="~/lib/jquery-ui/themes/base/draggable.css" rel="stylesheet" />
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+<script src="~/lib/knockout/dist/knockout.js"></script>
+
+<script src="~/lib/cldrjs/dist/cldr.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/event.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/supplemental.js"></script>
+<script src="~/lib/cldrjs/dist/cldr/unresolved.js"></script>
+<script src="~/lib/globalize/dist/globalize.js"></script>
+<script src="~/lib/globalize/dist/globalize/currency.js"></script>
+<script src="~/lib/globalize/dist/globalize/message.js"></script>
+<script src="~/lib/globalize/dist/globalize/number.js"></script>
+<script src="~/lib/globalize/dist/globalize/date.js"></script>
+
+<script src="~/lib/devextreme/js/dx.all.js"></script>
+<link href="~/lib/devextreme/css/dx.common.css" rel="stylesheet" />
+<link href="~/lib/devextreme/css/dx.light.css" rel="stylesheet" />
+
+<script src="~/lib/xtrareportsjs/js/dx-analytics-core.min.js"></script>
+<script src="~/lib/xtrareportsjs/js/dx-querybuilder.min.js"></script>
+<script src="~/lib/xtrareportsjs/js/dx-webdocumentviewer.min.js"></script>
+<script src="~/lib/xtrareportsjs/js/dx-reportdesigner.min.js"></script>
+
+<link href="~/lib/xtrareportsjs/css/dx-analytics.common.min.css" rel="stylesheet" />
+<link href="~/lib/xtrareportsjs/css/dx-querybuilder.min.css" rel="stylesheet" />
+<link href="~/lib/xtrareportsjs/css/dx-webdocumentviewer.min.css" rel="stylesheet" />
+<link href="~/lib/xtrareportsjs/css/dx-reportdesigner.min.css" rel="stylesheet" />
+<link href="~/lib/xtrareportsjs/css/dx-analytics.light.min.css" rel="stylesheet" />
+
+<script src="~/lib/ace-builds/src/ace.js"></script>
+<script src="~/lib/ace-builds/src/ext-language_tools.js"></script>
+<script src="~/lib/ace-builds/src/snippets/text.js"></script>
+
+
+@(Html.DevExpress().ReportDesigner("reportDesigner")
+    .Height("1000px")
+        .DataSources(dataSources => {
+        // Create a SQL data source with the specified connection string.
+        SqlDataSource ds = new SqlDataSource("NWindConnectionString");
+
+        // Create a SQL query to access the Products data table.
+        SelectQuery query = SelectQueryFluentBuilder.AddTable("Products").SelectAllColumnsFromTable().Build("Products");
+        ds.Queries.Add(query);
+        ds.RebuildResultSchema();
+
+        // Add the created data source to the list of default data sources. 
+        dataSources.Add("Northwind", ds);
+    })
+          .Bind("XtraReport"))

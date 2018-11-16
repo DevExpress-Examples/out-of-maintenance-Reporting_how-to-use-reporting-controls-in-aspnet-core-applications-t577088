@@ -1,10 +1,31 @@
 # How to use reporting controls in ASP.NET Core applications
 
 
-<p>This example demonstrates how to use the <a href="https://documentation.devexpress.com/XtraReports/17103/Creating-End-User-Reporting-Applications/Web-Reporting/Report-Designer">End-User Report Designer</a> and <a href="https://documentation.devexpress.com/XtraReports/17738/Creating-End-User-Reporting-Applications/Web-Reporting/Document-Viewer/HTML5-Document-Viewer">HTML5 Document Viewer</a> in an ASP.NET Core application targeting .NET Framework v 4.6.1.<br><br>These controls require the <strong>DevExpress.AspNetCore.Reporting </strong><a href="https://www.nuget.org/">NuGet</a> and <strong>xtrareportsjs </strong><a href="https://bower.io/docs/api/">Bower</a> packages. To integrate these controls into an application, register the required services in the <strong>Startup </strong>class, reference the necessary client resources and use the <strong>ReportDesigner </strong>or <strong>WebDocumentViewer </strong>wrapper.<br><br>This example uses an Entity Framework data source as well as an SQL data source.<br><br>Before running this example, do the following:<br>1. In Visual Studio, right-click the ASP.NET Core application and select <strong>Manage Bower Packages</strong>. In the invoked window, switch to the <strong>Updates </strong>page and update the <strong>xtrareportsjs </strong>package to the required version. This downloads all the required client resources for deploying the control.</p>
-<p>2. Right-click the ASP.NET Core application and select <strong>Manage</strong><strong> NuGet Packages</strong>. In the invoked window, switch to the <strong>Updates </strong>page, enable the <strong>Include prerelease</strong> check box and update the <strong>DevExpress.AspNetCore.Reporting </strong>package. <br>You may need to add a new NuGet package source to install DevExpress packages <a href="https://www.devexpress.com/Support/Center/Question/Details/T466415/devexpress-nuget-packages">online</a> or offline from the <strong>C:\Program Files (x86)\DevExpress 17.2\Components\System\Components\packages</strong><em> </em>path.<br><br></p>
-<p>For step-by-step instructions, refer to the following documentation topic: <a href="https://documentation.devexpress.com/XtraReports/119717/Creating-End-User-Reporting-Applications/Web-Reporting/Web-Reporting-Overview/ASP-NET-Core-Reporting-NET-Framework">ASP.NET Core Reporting (.NET Framework)</a>.</p>
+This example demonstrates how to use the <a href="https://docs.devexpress.com/XtraReports/400249/create-end-user-reporting-applications/web-reporting/asp-net-core-reporting/end-user-report-designer">End-User Report Designer</a> and <a href="https://docs.devexpress.com/XtraReports/400248/create-end-user-reporting-applications/web-reporting/asp-net-core-reporting/document-viewer">HTML5 Document Viewer</a> in an ASP.NET Core application that targets both .NET Standard and .NET Framework.
 
-<br/>
+
+These are the main steps to integrate these controls into an application:
+
+1. Install the **DevExpress.AspNetCore.Reporting** <a href="https://www.nuget.org/">NuGet</a> package.
+
+2. Install either the **xtrareportsjs** <a href="https://bower.io/docs/api/">Bower</a> or **devexpress-reporting** <a href="https://www.npmjs.com/package/devexpress-reporting">npm</a> package.
+
+3. Register reporting services in the **Startup** class.
+
+4. Reference all the required client resources in the View file.
+
+5. Use the <a href="https://docs.devexpress.com/XtraReports/DevExpress.AspNetCore.BuilderFactoryExtensions.ReportDesigner.overloads">ReportDesigner</a> and <a href="https://docs.devexpress.com/XtraReports/DevExpress.AspNetCore.BuilderFactoryExtensions.WebDocumentViewer.overloads">WebDocumentViewer </a> wrappers to display reporting controls on your web pages.
+
+
+Before running this example, do the following:
+
+1. In Visual Studio, right-click the ASP.NET Core application and select **Manage Bower Packages**. In the invoked window, switch to the **Updates** page and update the **xtrareportsjs** package to the required version. This downloads all the required client resources to deploy the control.
+
+2. Right-click the ASP.NET Core application and select **Manage NuGet Packages**. In the invoked window, switch to the **Updates** page and update the **DevExpress.AspNetCore.Reporting** package. You may need to add a new NuGet package source to install DevExpress packages <a href="https://www.devexpress.com/Support/Center/Question/Details/T466415/devexpress-nuget-packages">online</a> or offline from the **C:\Program Files (x86)\DevExpress 18.2\Components\System\Components\packages</strong><em> </em>path.**
+
+
+For more information and step-by-step tutorials, refer to the following documentation topic: <a href="https://docs.devexpress.com/XtraReports/119717/create-end-user-reporting-applications/web-reporting/asp.net-core-reporting">ASP.NET Core Reporting</a>.
+
+
 
 

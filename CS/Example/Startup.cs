@@ -43,6 +43,11 @@ namespace Example {
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "node_modules")),
+                RequestPath = "/node_modules"
+            });              
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",

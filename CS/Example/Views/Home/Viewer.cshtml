@@ -1,30 +1,32 @@
-<link href="~/lib/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" />
-<link href="~/lib/jquery-ui/themes/base/resizable.css" rel="stylesheet" />
-<link href="~/lib/jquery-ui/themes/base/draggable.css" rel="stylesheet" />
+<link href="~/node_modules/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/node_modules/devextreme/dist/css/dx.common.css" rel="stylesheet" />
+<link href="~/node_modules/devextreme/dist/css/dx.light.css" rel="stylesheet" />
+<link href="~/node_modules/@@devexpress/analytics-core/dist/css/dx-analytics.common.css" rel="stylesheet" />
+<link href="~/node_modules/@@devexpress/analytics-core/dist/css/dx-analytics.light.css" rel="stylesheet" />
+<link href="~/node_modules/devexpress-reporting/dist/css/dx-webdocumentviewer.css" rel="stylesheet" />
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
-<script src="~/lib/knockout/dist/knockout.js"></script>
+<!-- 3rd-party dependencies -->    
+<script src="~/node_modules/jquery/dist/jquery.js"></script>
+<script src="~/node_modules/jquery-ui-dist/jquery-ui.js"></script>
+<script src="~/node_modules/knockout/build/output/knockout-latest.js"></script>
+<script src="~/node_modules/ace-builds/src-min-noconflict/ace.js"></script>
+<script src="~/node_modules/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+<script src="~/node_modules/ace-builds/src-min-noconflict/theme-dreamweaver.js"></script>
+<script src="~/node_modules/ace-builds/src-min-noconflict/theme-ambiance.js"></script>
+<script src="~/node_modules/ace-builds/src-min-noconflict/snippets/text.js"></script>
+<script src="~/node_modules/cldrjs/dist/cldr.js"></script>
+<script src="~/node_modules/cldrjs/dist/cldr/event.js"></script>
+<script src="~/node_modules/cldrjs/dist/cldr/supplemental.js"></script>
+<script src="~/node_modules/cldrjs/dist/cldr/unresolved.js"></script>
+<script src="~/node_modules/globalize/dist/globalize.js"></script>
+<script src="~/node_modules/globalize/dist/globalize/message.js"></script>
+<script src="~/node_modules/globalize/dist/globalize/number.js"></script>
+<script src="~/node_modules/globalize/dist/globalize/currency.js"></script>
+<script src="~/node_modules/globalize/dist/globalize/date.js"></script>
 
-<script src="~/lib/cldrjs/dist/cldr.js"></script>
-<script src="~/lib/cldrjs/dist/cldr/event.js"></script>
-<script src="~/lib/cldrjs/dist/cldr/supplemental.js"></script>
-<script src="~/lib/cldrjs/dist/cldr/unresolved.js"></script>
-<script src="~/lib/globalize/dist/globalize.js"></script>
-<script src="~/lib/globalize/dist/globalize/currency.js"></script>
-<script src="~/lib/globalize/dist/globalize/message.js"></script>
-<script src="~/lib/globalize/dist/globalize/number.js"></script>
-<script src="~/lib/globalize/dist/globalize/date.js"></script>
-
-<script src="~/lib/devextreme/js/dx.all.js"></script>
-<link href="~/lib/devextreme/css/dx.common.css" rel="stylesheet" />
-<link href="~/lib/devextreme/css/dx.light.css" rel="stylesheet" />
-
-<script src="~/lib/xtrareportsjs/js/dx-analytics-core.min.js"></script>
-<script src="~/lib/xtrareportsjs/js/dx-webdocumentviewer.min.js"></script>
-<link href="~/lib/xtrareportsjs/css/dx-analytics.common.min.css" rel="stylesheet" />
-<link href="~/lib/xtrareportsjs/css/dx-analytics.light.min.css" rel="stylesheet" />
-<link href="~/lib/xtrareportsjs/css/dx-webdocumentviewer.css" rel="stylesheet" />
+<script src="~/node_modules/devextreme/dist/js/dx.all.js"></script>
+<script src="~/node_modules/@@devexpress/analytics-core/dist/js/dx-analytics-core.min.js"></script>
+<script src="~/node_modules/devexpress-reporting/dist/js/dx-webdocumentviewer.min.js"></script>
 
 
 @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind("XtraReport")

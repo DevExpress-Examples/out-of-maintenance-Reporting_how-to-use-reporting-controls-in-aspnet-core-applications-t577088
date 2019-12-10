@@ -12,9 +12,11 @@ Prior to running this example, perform the following steps:
 
 3. Check whether you have the [latest Node.js version](https://nodejs.org/) installed and uninstall any previous version. To check Node.js version, type **node** at the command prompt.
 
+![screenshot](images/screenshot.png)
+
 For more information and step-by-step tutorials, refer to the following topics:
 
-* [Add a New Report to an ASP.NET Core Application](https://docs.devexpress.com/XtraReports/400039)
+* [Create a Report in Visual Studio](https://docs.devexpress.com/XtraReports/14989)
 * [Add an End-User Report Designer to an ASP.NET Core Application](https://docs.devexpress.com/XtraReports/400042)
 * [Add the Document Viewer to an ASP.NET Core Application](https://docs.devexpress.com/XtraReports/400043)
 

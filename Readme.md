@@ -1,7 +1,7 @@
 # How to use reporting controls in ASP.NET Core applications
 
 
-This example demonstrates how to use the <a href="https://docs.devexpress.com/XtraReports/400249/create-end-user-reporting-applications/web-reporting/asp-net-core-reporting/end-user-report-designer">End-User Report Designer</a> and <a href="https://docs.devexpress.com/XtraReports/400248/create-end-user-reporting-applications/web-reporting/asp-net-core-reporting/document-viewer">Document Viewer</a> in an ASP.NET Core application that targets both .NET Standard and .NET Framework.
+This example demonstrates how to use the <a href="https://docs.devexpress.com/XtraReports/401850">Web Document Viewer</a> and <a href="https://docs.devexpress.com/XtraReports/119176">Web End-User Report Designer</a> in an ASP.NET Core application.
 
 
 These are the main steps to integrate these controls into an application:

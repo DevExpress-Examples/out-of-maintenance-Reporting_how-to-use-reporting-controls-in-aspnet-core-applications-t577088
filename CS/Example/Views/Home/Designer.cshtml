@@ -1,53 +1,18 @@
-@using DevExpress.DataAccess.Sql;
-@using SqlDataSource = DevExpress.DataAccess.Sql.SqlDataSource;
+@{
+    var designerRender = Html.DevExpress().ReportDesigner("reportDesigner")
+        .Height("1000px")
+        .Bind("XtraReport1");
+    @designerRender.RenderHtml()
+}
 
-<link href="~/node_modules/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
-<link href="~/node_modules/devextreme/dist/css/dx.common.css" rel="stylesheet" />
-<link href="~/node_modules/devextreme/dist/css/dx.light.css" rel="stylesheet" />
-<link href="~/node_modules/@@devexpress/analytics-core/dist/css/dx-analytics.common.css" rel="stylesheet" />
-<link href="~/node_modules/@@devexpress/analytics-core/dist/css/dx-analytics.light.css" rel="stylesheet" />
-<link href="~/node_modules/@@devexpress/analytics-core/dist/css/dx-querybuilder.css" rel="stylesheet" />
-<link href="~/node_modules/devexpress-reporting/dist/css/dx-reportdesigner.css" rel="stylesheet" />
-<link href="~/node_modules/devexpress-reporting/dist/css/dx-webdocumentviewer.css" rel="stylesheet" />
+@section Scripts {
+    <link href="~/css/dx-reporting-skeleton-screen.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+    <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
 
-<!-- 3rd-party dependencies -->    
-<script src="~/node_modules/jquery/dist/jquery.js"></script>
-<script src="~/node_modules/jquery-ui-dist/jquery-ui.js"></script>
-<script src="~/node_modules/knockout/build/output/knockout-latest.js"></script>
-<script src="~/node_modules/ace-builds/src-min-noconflict/ace.js"></script>
-<script src="~/node_modules/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
-<script src="~/node_modules/ace-builds/src-min-noconflict/theme-dreamweaver.js"></script>
-<script src="~/node_modules/ace-builds/src-min-noconflict/theme-ambiance.js"></script>
-<script src="~/node_modules/ace-builds/src-min-noconflict/snippets/text.js"></script>
-<script src="~/node_modules/cldrjs/dist/cldr.js"></script>
-<script src="~/node_modules/cldrjs/dist/cldr/event.js"></script>
-<script src="~/node_modules/cldrjs/dist/cldr/supplemental.js"></script>
-<script src="~/node_modules/cldrjs/dist/cldr/unresolved.js"></script>
-<script src="~/node_modules/globalize/dist/globalize.js"></script>
-<script src="~/node_modules/globalize/dist/globalize/message.js"></script>
-<script src="~/node_modules/globalize/dist/globalize/number.js"></script>
-<script src="~/node_modules/globalize/dist/globalize/currency.js"></script>
-<script src="~/node_modules/globalize/dist/globalize/date.js"></script>
+    <script src="~/js/reporting.thirdparty.bundle.js"></script>
+    <script src="~/js/viewer.part.bundle.js"></script>
+    <script src="~/js/designer.part.bundle.js"></script>
 
-<script src="~/node_modules/devextreme/dist/js/dx.all.js"></script>
-<script src="~/node_modules/@@devexpress/analytics-core/dist/js/dx-analytics-core.min.js"></script>
-<script src="~/node_modules/@@devexpress/analytics-core/dist/js/dx-querybuilder.min.js"></script>
-<script src="~/node_modules/devexpress-reporting/dist/js/dx-webdocumentviewer.min.js"></script>
-<script src="~/node_modules/devexpress-reporting/dist/js/dx-reportdesigner.min.js"></script>
-
-
-@(Html.DevExpress().ReportDesigner("reportDesigner")
-    .Height("1000px")
-        .DataSources(dataSources => {
-        // Create a SQL data source with the specified connection string.
-        SqlDataSource ds = new SqlDataSource("NWindConnectionString");
-
-        // Create a SQL query to access the Products data table.
-        SelectQuery query = SelectQueryFluentBuilder.AddTable("Products").SelectAllColumnsFromTable().Build("Products");
-        ds.Queries.Add(query);
-        ds.RebuildResultSchema();
-
-        // Add the created data source to the list of default data sources. 
-        dataSources.Add("Northwind", ds);
-    })
-          .Bind("XtraReport"))
+    @designerRender.RenderScripts()
+}

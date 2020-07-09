@@ -7,7 +7,8 @@ namespace Example.Controllers {
         }
 
         public IActionResult Designer() {
-            return View();
+            Models.ReportDesignerModel model = new Models.ReportDesignerModel();
+            return View(model);
         }
 
         public IActionResult Viewer() {
